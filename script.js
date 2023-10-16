@@ -7,7 +7,7 @@ function toDoAdd() {
   const toDo = inputList.value;
   const dateInput =dateInputElement.value;
   if (toDo) { // Check if the input is not empty
-    toDoList.push({
+    toDoList.unshift({
       name: toDo,
       dueDate: dateInput
       });
