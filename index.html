@@ -8,17 +8,19 @@
 </head>
 <body>
   <h2>To do list practice 1</h2>
-  <input 
-    type="text" 
-    placeholder="Todo name"
-    class="todo-input">
-  <input type="date" class="js-due-date">
-  <button 
-    class="add-button"
-    onclick="toDoAdd()">add</button>
+  <div class="input-grid">
+    <input 
+      type="text" 
+      placeholder="Todo name"
+      class="todo-input">
+    <input type="date" class="js-due-date due-date">
+    <button 
+      type="button"
+      class="add-button"
+      onclick="toDoAdd()">Add</button>
+  </div>
   <div class="todo-list">
   </div>
-  <canvas>Hello</canvas>
   <script src="script.js"></script>
 </body>
 </html>
