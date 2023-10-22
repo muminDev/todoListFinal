@@ -19,9 +19,7 @@ function toDoAdd() {
 
 function displayToDoList() {
   listContainer.innerHTML = ''; // Clear the existing list
-
-  for (let i = 0; i < toDoList.length; i++) {
-    const toDoObject = toDoList[i];
+  toDoList.forEach(function(toDoObject, index){
     const name = toDoObject.name;
     const dueDate = toDoObject.dueDate;
     const html = `
@@ -29,11 +27,10 @@ function displayToDoList() {
     <div class = 'todo-text'>${dueDate}</div>
     <button class='delete-button' 
       onclick='
-        toDoList.splice(${i}, 1);
+        toDoList.splice(${index}, 1);
         displayToDoList()
       '>Delete</button>
     `;
     listContainer.innerHTML += html;
-  }
-  console.log(toDoList);
+  });
 }
