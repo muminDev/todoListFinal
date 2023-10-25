@@ -2,7 +2,11 @@ const toDoList = [];
 const inputList = document.querySelector('.todo-input');
 const listContainer = document.querySelector('.todo-list');
 const dateInputElement = document.querySelector('.js-due-date')
-
+//Adding eventListener for add todo button
+document.querySelector('.add-button')
+  .addEventListener('click', () => {
+    toDoAdd();
+  });
 function toDoAdd() {
   const toDo = inputList.value;
   const dateInput = dateInputElement.value;
